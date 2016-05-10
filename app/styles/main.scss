@@ -1,2 +1,139 @@
 // bower:scss
 // endbower
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Asap, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background: #F7F7F7;
+}
+
+.hero{
+
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  z-index: 1;
+
+  &:after{
+    content: '';
+    background: url('/images/hero3.jpeg') no-repeat center center fixed;
+    //filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+}
+
+.section-inner{
+  width: 100%;
+  max-width: 1096px;
+  margin: 0 auto;
+}
+
+.section-title{
+  text-align: center;
+  font-size: 2.5em;
+  margin: 1.5em 0;
+  line-height: normal;
+  color: #353535;
+}
+
+
+.works{
+
+  $circleSize: 30px;
+  $barSize: 6px;
+
+  .work{
+    display: flex;
+  }
+
+  .logo-container{
+
+    position: relative;
+    padding-right: 3em;
+    width: 300px;
+    text-align: right;
+    flex-shrink: 0;
+
+    &:after{
+      content: '';
+      width: $circleSize;
+      height: $circleSize;
+      border-radius: $circleSize;
+      background: #E4E4E4;
+      position: absolute;
+      top: 0;
+      right: -$barSize - ($circleSize / 2) + ($barSize / 2);
+    }
+
+    img{
+      display: block;
+    }
+
+    time, span{
+      color: #999;
+      font-size: 0.9em;
+      font-style: italic;
+      display: block;
+    }
+
+    time{
+      white-space: nowrap;
+      margin-bottom: 7px;
+    }
+
+    span{
+      line-height: normal;
+      margin-bottom: 5px;
+    }
+
+    h3{
+      margin: 0;
+      font-size: 2em;
+      line-height: normal;
+    }
+
+  }
+
+  .description-container{
+
+    position: relative;
+    padding: 3em 0 1.5em 3em;
+    line-height: 28px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: #E4E4E4;
+      width: $barSize;
+    }
+
+  }
+
+}
+
+.skills{
+
+  border-top: 7px solid #E4E4E4;
+
+  .section-title{
+    margin-top: 0;
+    padding-top: 1.5em;
+  }
+
+}
